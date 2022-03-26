@@ -1,0 +1,20 @@
+header {
+    display: flex;
+    padding: 8px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-navegation {
+    display: flex;
+    justify-content: space-between;
+}
+.header-navegation ul {
+    display: flex;
+    list-style: none;
+}
+.header-navegation ul li a{
+    text-decoration: none;
+    padding: 5px;
+}
