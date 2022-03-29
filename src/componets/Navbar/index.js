@@ -1,4 +1,6 @@
 import './style.scss'
+import CartWidget from '../CartWidget'
+
 const Navbar = () => {
 
     return (
@@ -50,9 +52,7 @@ const Navbar = () => {
                                 <a href="#" alt="Mis compras">Mis compras</a>
                             </li>
                             <li>
-                                <a href="#" alt="Carrito de compras">
-                                    <span className='user-cart'></span>
-                                </a>
+                                <CartWidget />
                             </li>
                         </ul>
                     </nav>
