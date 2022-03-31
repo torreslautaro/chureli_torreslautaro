@@ -1,3 +1,8 @@
-h1 {
-  margin-top: 50px;
+main {
+  display: grid;
+  grid-template-columns: 1fr 150px 1fr;
+  h1 {
+    grid-column: 1 / 4;
+    margin-top: 50px;
+  }
 }

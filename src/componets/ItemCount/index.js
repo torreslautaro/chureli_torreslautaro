@@ -34,13 +34,15 @@ const ItemCount = ({stock, initial, onAdd}) => {
   }
 
   return (
-    <>
-      <button onClick={restarCantidad}>-</button>
-      <p>{cantidad}</p>
-      <button onClick={sumarCantidad}>+</button>
-      {mensaje ? <p>{mensaje}</p> : ''}
-      {stockState ? <button onClick={addItemsOnCart}>Agregar al Carrito</button> : ''}
-    </>
+      <div className='itemCount-Container'>
+        <div className='itemCount-Container--counter'>
+          <button onClick={restarCantidad}>-</button>
+          <p>{cantidad}</p>
+          <button onClick={sumarCantidad}>+</button>
+        </div>
+        {mensaje ? <p className='message-error'>{mensaje}</p> : ''}
+        {stockState ? <button className='button-add' onClick={addItemsOnCart}>Agregar al Carrito</button> : ''}
+      </div>
   )
 }
 
