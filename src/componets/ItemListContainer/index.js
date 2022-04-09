@@ -9,16 +9,10 @@ const ItemListContainer = ({greeting}) => {
   useEffect(() => {
     getProducts().then(res => setProducts(res))
   },[])
-
-  const handleOnAdd = (cantidad) => {
-    console.log(`Se agregaron ${cantidad} productos` )
-  }
-
   return (
     <>
     <main>
       <h1>{greeting}</h1>
-      <ItemCount stock={10} initial={0} onAdd={handleOnAdd}></ItemCount>
       <ItemList products={products} />
     </main>
     </>
