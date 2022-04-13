@@ -2,7 +2,7 @@
     grid-row: 2;
     grid-column: 2 / 3;
     padding: 5px;
-    background-color: lightgray;
+    background-color: #e4d5e6;
     border-radius: 10px;
     box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
     display: grid;
@@ -11,7 +11,7 @@
       display: flex;
       justify-content: space-around;
       background-color: white;
-      border: 1px solid lightgray;
+      border: 1px solid #e4d5e6;
       border-radius: 5px;
       p {
         font-weight: 500;
@@ -37,7 +37,7 @@
       border-radius: 5px;
       padding: 5px;
       background: white;
-      border: 1px solid lightgray;
+      border: 1px solid #e4d5e6;
       color: #5e7787;
       font-weight: 600; 
     }

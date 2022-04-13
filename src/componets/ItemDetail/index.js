@@ -1,12 +1,12 @@
 import './style.scss'
 import ItemCount from '../ItemCount'
 
-const ItemDetail = ({title, price, description, category, image, rating}) => {
+const ItemDetail = ({title, price, description, image, condition}) => {
 
   const handleOnAdd = (cantidad) => {
     console.log(`Se agregaron ${cantidad} productos` )
   }
-
+  
   return (
     <article className="itemDetail-container">
       <div className="itemDetail-container--images">
@@ -16,7 +16,7 @@ const ItemDetail = ({title, price, description, category, image, rating}) => {
       </div>
       <div className="itemDetail-container--details">
         <div className='itemDetail-container--details--title'>
-          <p className='itemDetail-container--details--title__category'>{category}</p>
+          <p className='itemDetail-container--details--title__category'>{condition}</p>
           <h2>{title}</h2>
           <p className='itemDetail-container--details--title__price'>${price}</p>
         </div>

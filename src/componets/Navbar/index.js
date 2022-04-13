@@ -1,14 +1,22 @@
 import './style.scss'
+import { useState,useEffect } from 'react'
 import CartWidget from '../CartWidget'
+import { Link } from 'react-router-dom'
+import getCategories from '../../services/getCategories'
+import Select from '../utils/Select'
 
 const Navbar = () => {
-
+    const [category, setCategory] = useState([])
+    useEffect(() => {
+        getCategories()
+            .then(res => setCategory(res))
+    }, [])
     return (
         <header>
             <div className='header-first'>
-                <a href='#' alt="Logo ChureLi">
-                    <img src='./logo3.png' alt='El logardo de churo' />
-                </a>
+                <Link to='/' alt="Logo ChureLi">
+                    <img src='../logo3.png' alt='El logardo de churo' />
+                </Link>
                 <div className='header-first--formandoffer'>
                     <form>
                         <input type="text"></input>
@@ -28,13 +36,13 @@ const Navbar = () => {
                     <nav>
                         <ul>
                             <li>
-                                <a href="#">Componentes</a>
+                                <Select category={category} className='selectNavbar' />
                             </li>
                             <li>
-                                <a href="#">Combos Actualizacion</a>
+                                <a href="#">Ofertas</a>
                             </li>
                             <li>
-                                <a href="#">Accesorios</a>
+                                <a href="#">Ayuda</a>
                             </li>
                         </ul>
                     </nav>

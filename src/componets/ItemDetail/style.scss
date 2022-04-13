@@ -1,12 +1,11 @@
 .itemDetail-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  height: 400px;
+  width: 60%;
   border: 1px solid lightgray;
   box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
   border-radius: 5px;
-  width: 700px;
-  padding: 0 25px;
+  padding: 15px 25px;
   &--images {
     grid-column: 1;
     display: flex;
@@ -39,7 +38,8 @@
         font-weight: 500;
       }
       &__category{
-        font-weight: 300;
+        color: #5e7787;
+        font-weight: 500;
         background: #e4d5e6;
         width: min-content;
         border-radius: 10px;

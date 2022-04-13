@@ -3,6 +3,7 @@ header {
     display: grid;
     padding: 8px;
     width: 100%;
+    height: 15vh;
     background-color: #e5e4e4;
 }
 .header-first {
@@ -84,6 +85,7 @@ header {
 
 .header-second .header-second--navigation ul {
     display: flex;
+    gap: 10px;
     list-style: none;
 }
 .header-second .header-second--navigation ul li a {
