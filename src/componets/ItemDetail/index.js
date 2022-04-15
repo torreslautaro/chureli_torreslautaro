@@ -1,10 +1,14 @@
 import './style.scss'
 import ItemCount from '../ItemCount'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({title, price, description, image, condition}) => {
-
+  const [quantity, setQuantiy] = useState(0)
+  const [goToCart, setGoToCart] = useState(false)
   const handleOnAdd = (cantidad) => {
-    console.log(`Se agregaron ${cantidad} productos` )
+    setQuantiy(cantidad)
+    setGoToCart(true)
   }
   
   return (
@@ -24,7 +28,7 @@ const ItemDetail = ({title, price, description, image, condition}) => {
         <p className='itemDetail-container--details__description'>{description}</p>
         </div>
         <div className='itemDetail-container--details__counter'>
-          <ItemCount stock={10} initial={0} onAdd={handleOnAdd} />
+          { goToCart ? <Link to={`/cart`} className="buttonGoToCart">Ir al carrito</Link> : <ItemCount stock={10} initial={0} onAdd={handleOnAdd} />}
         </div>
       </div>
     </article>

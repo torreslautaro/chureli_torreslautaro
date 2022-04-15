@@ -51,4 +51,16 @@
       }
     }
   }
+  .buttonGoToCart {
+    display: flex;
+    justify-content: center;
+    background: none;
+    border-radius: 5px;
+    padding: 5px;
+    background: white;
+    border: 1px solid #5e7787;
+    color: #5e7787;
+    font-weight: 600; 
+    text-decoration: none;
+  }
 }
