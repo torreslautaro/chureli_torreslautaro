@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
 
   return (
     <section>
-      <ItemDetail {...product} />
+      {product ? <ItemDetail {...product} /> : 'Cargando...'}
     </section>
   )
 

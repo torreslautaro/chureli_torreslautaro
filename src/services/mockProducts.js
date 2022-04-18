@@ -11,7 +11,8 @@ const products =  [
         "rate":3.9,
         "count":120
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"2",
@@ -24,7 +25,8 @@ const products =  [
         "rate":4.1,
         "count":259
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"3",
@@ -37,7 +39,8 @@ const products =  [
         "rate":4.7,
         "count":500
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"4",
@@ -50,7 +53,8 @@ const products =  [
         "rate":2.1,
         "count":430
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"5",
@@ -63,7 +67,8 @@ const products =  [
         "rate":4.6,
         "count":400
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"6",
@@ -76,7 +81,8 @@ const products =  [
         "rate":3.9,
         "count":70
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"7",
@@ -89,7 +95,8 @@ const products =  [
         "rate":3,
         "count":400
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"8",
@@ -102,7 +109,8 @@ const products =  [
         "rate":1.9,
         "count":100
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"9",
@@ -115,7 +123,8 @@ const products =  [
         "rate":3.3,
         "count":203
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"10",
@@ -128,7 +137,8 @@ const products =  [
         "rate":2.9,
         "count":470
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"11",
@@ -141,7 +151,8 @@ const products =  [
         "rate":4.8,
         "count":319
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"12",
@@ -154,7 +165,8 @@ const products =  [
         "rate":4.8,
         "count":400
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"13",
@@ -167,7 +179,8 @@ const products =  [
         "rate":2.9,
         "count":250
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"14",
@@ -180,7 +193,8 @@ const products =  [
         "rate":2.2,
         "count":140
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"15",
@@ -193,7 +207,8 @@ const products =  [
         "rate":2.6,
         "count":235
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"16",
@@ -206,7 +221,8 @@ const products =  [
         "rate":2.9,
         "count":340
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"17",
@@ -219,7 +235,8 @@ const products =  [
         "rate":3.8,
         "count":679
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"18",
@@ -232,7 +249,8 @@ const products =  [
         "rate":4.7,
         "count":130
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"19",
@@ -245,7 +263,8 @@ const products =  [
         "rate":4.5,
         "count":146
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   },
   {
      "id":"20",
@@ -258,7 +277,8 @@ const products =  [
         "rate":3.6,
         "count":145
      },
-     "condition" : "Nuevo"
+     "condition" : "Nuevo",
+     "stock" : 15
   }
 ]
   
