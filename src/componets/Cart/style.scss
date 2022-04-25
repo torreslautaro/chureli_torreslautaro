@@ -64,18 +64,6 @@
       }
       &--actions {
         align-self: center;
-        button {
-          padding: 10px;
-          border-radius: 5px;
-          border: 1px solid rgb(184, 37, 37);
-          background-color: #fff;
-          color: rgb(184, 37, 37);
-          align-self: center;
-          cursor: pointer;
-        }
-        button:hover {
-          box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
-        }
       }
     }
     &__total {
@@ -88,6 +76,18 @@
         color: green;
       }
     }
+    .buttonsBorrar {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(184, 37, 37);
+        background-color: #fff;
+        color: rgb(184, 37, 37);
+        align-self: center;
+        cursor: pointer;
+    }
+        .buttonsBorrar:hover {
+        box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
+      }
   }
   
 }

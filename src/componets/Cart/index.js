@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
   
-  const {cart, removeItem, totalPrice} = useContext(CartContext)
+  const {cart, removeItem, totalPrice, clearCart} = useContext(CartContext)
   
   if(cart.length === 0) {
     return(
@@ -43,12 +43,13 @@ const Cart = () => {
                     ${item.price * item.quantity}
                   </div>
                   <div className='cartContainer--grilla--item--actions'>
-                    <button onClick={() => removeItem(item.id)}>Borrar Producto</button>
+                    <button className='buttonsBorrar' onClick={() => removeItem(item.id)}>Borrar Producto</button>
                   </div>
                 </div>
               )
             })
           }
+          <button className='buttonsBorrar' onClick={() => clearCart()}>Borrar todos los productos</button>
           <p className='cartContainer--grilla__total'>Total a pagar: <span>{totalPrice}</span></p>
       </div>
     </div>
