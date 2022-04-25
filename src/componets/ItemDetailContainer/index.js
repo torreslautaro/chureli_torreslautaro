@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     getProductsDetails(idProduct)
     .then(
-      res => setProduct(res[0])
+      res => setProduct(res)
       )
   }, [idProduct])
 

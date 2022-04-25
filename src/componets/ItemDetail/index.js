@@ -8,7 +8,7 @@ const ItemDetail = ({id,title, price, description, image, condition, stock}) => 
   const {addItem, isInCart} = useContext(CartContext)
   const handleOnAdd = (quantity) => {
     const newProduct = {
-      id,title,price, quantity
+      id,title,price, quantity, image
     }
     addItem(newProduct)
   }
@@ -30,7 +30,7 @@ const ItemDetail = ({id,title, price, description, image, condition, stock}) => 
         </div>
         <div className='itemDetail-container--details__counter'>
           { isInCart(id) 
-            ? <Link to='/cart' className="buttonGoToCart">Ir al carrito</Link> 
+            ? <Link to='/cart' className="buttonGoToCart">Terminar mi compra</Link> 
             : <ItemCount stock={stock} initial={0} onAdd={handleOnAdd} />
           }
         </div>

@@ -12,6 +12,7 @@ const ItemListContainer = ({greeting}) => {
   useEffect(() => {
     getProducts(idCategory).then(res => setProducts(res))
   },[idCategory])
+
   return (
     <>
     <main>
