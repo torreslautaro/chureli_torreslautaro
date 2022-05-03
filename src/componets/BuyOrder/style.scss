@@ -1,0 +1,51 @@
+.cartContainer--grilla {
+  h4 {
+    color: rgb(209, 64, 64);
+  }
+  &--form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 5px 0;
+      input {
+        border: none;
+        border-bottom: 1px solid lightslategray;
+        padding: 5px;
+        outline: none;
+        text-align: center;
+      }
+      input::placeholder {
+        text-align: center;
+      }
+    }
+  }
+  &--item {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .message--success {
+    background-color: rgb(158, 218, 158);
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+    
+  }
+  .message--error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px 0;
+    background-color: rgb(230, 146, 146);
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+  }
+  .buttonsBorrar:hover {
+    box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
+  }
+  
+}

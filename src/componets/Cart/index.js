@@ -11,7 +11,7 @@ const Cart = () => {
     return(
       <div className='cartEmpty'>
         <h2>El carrito de compras esta vacio!</h2>
-        <Link to="/">Volver al inicio</Link>
+        <Link className='buttonPrimary' to="/">Volver al inicio</Link>
       </div>
     )
   }
@@ -49,8 +49,9 @@ const Cart = () => {
               )
             })
           }
-          <button className='buttonsBorrar' onClick={() => clearCart()}>Borrar todos los productos</button>
           <p className='cartContainer--grilla__total'>Total a pagar: <span>{totalPrice}</span></p>
+          <button className='buttonsBorrar' onClick={() => clearCart()}>Borrar todos los productos</button>
+          <Link to="/buyorder" className='buttonSuccess'>Ir a finalizar compra</Link>
       </div>
     </div>
 

@@ -1,6 +1,7 @@
 import './style.scss'
 import CartContext from '../../contexts/CartContext'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 
 const CartWidget = () => {
   const {getCartQuantity} = useContext(CartContext)
@@ -11,9 +12,9 @@ const CartWidget = () => {
 
   return(
     <>
-      <a href="#" alt="Carrito de compras">
+      <Link to='/cart' alt="Carrito de compras">
         <span className='user-cart'><b>{getCartQuantity()}</b></span>
-      </a>
+      </Link>
     </>
   )
 }

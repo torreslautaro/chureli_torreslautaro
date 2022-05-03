@@ -17,7 +17,7 @@ export const CartContexProvider = ({children}) => {
 
   const addItem = (product) => {
     setCart([...cart,product])
-    setTotalPrice(totalPrice + (product.price * product.quantity))
+    setTotalPrice((totalPrice + product.price * product.quantity))
   }
 
   const isInCart = (id) => {

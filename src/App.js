@@ -5,6 +5,7 @@ import ItemListContainer from './componets/ItemListContainer';
 import ItemDetailContainer from './componets/ItemDetailContainer';
 import Cart from './componets/Cart';
 import { CartContexProvider } from "./contexts/CartContext";
+import BuyOrder from "./componets/BuyOrder";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="details/:idProduct" element={<ItemDetailContainer />} />
             <Route path="categories/:idCategory" element={<ItemListContainer greeting={'Bienvenido a ChureLi'} />} />
             <Route path="cart" element={<Cart/>} />
+            <Route path="buyorder" element={<BuyOrder/>} />
         </Routes>
       </CartContexProvider>
       </BrowserRouter>

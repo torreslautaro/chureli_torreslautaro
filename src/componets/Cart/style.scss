@@ -85,9 +85,36 @@
         align-self: center;
         cursor: pointer;
     }
-        .buttonsBorrar:hover {
-        box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
-      }
+    .buttonsBorrar:hover {
+      box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
+    }
+    .buttonSuccess {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid rgb(38, 151, 38);
+      background-color: #fff;
+      color: rgb(38, 151, 38);
+      align-self: center;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+    }
+    .buttonSuccess:hover {
+      box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
+    }
+    .buttonPrimary {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid rgb(37, 50, 231);
+      background-color: #fff;
+      color: rgb(37, 50, 231);
+      align-self: center;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+    }
+    .buttonPrimary:hover {
+      box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
+    }
   }
-  
 }
