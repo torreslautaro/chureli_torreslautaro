@@ -22,9 +22,6 @@
       }
     }
   }
-  &--item {
-    grid-template-columns: repeat(4, 1fr);
-  }
   .message--success {
     background-color: rgb(158, 218, 158);
     color: black;
