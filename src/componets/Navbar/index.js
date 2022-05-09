@@ -1,16 +1,27 @@
 import './style.scss'
 import { useState,useEffect } from 'react'
 import CartWidget from '../CartWidget'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate, useLocation } from 'react-router-dom'
 import getCategories from '../../services/getCategories'
 import Select from '../utils/Select'
 
 const Navbar = () => {
     const [category, setCategory] = useState([])
+    
+    const navigate = useNavigate()
+
+    const location = useLocation()
+
     useEffect(() => {
         getCategories()
             .then(res => setCategory(res))
     }, [])
+
+    const handleSubmit = (evt) => {
+        evt.preventDefault()
+        const search = evt.target[0].value
+        navigate(`/${search}`)
+    }
     return (
         <header>
             <div className='header-first'>
@@ -18,7 +29,7 @@ const Navbar = () => {
                     <img src='../logo3.png' alt='El logardo de churo' />
                 </Link>
                 <div className='header-first--formandoffer'>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <input type="text"></input>
                         <button></button>
                     </form>
