@@ -3,6 +3,10 @@ import { useContext, useState } from 'react'
 import CartContext from '../../contexts/CartContext'
 import addBuyOrder from '../../services/addBuyOrder'
 import { Link } from 'react-router-dom'
+import CardGrilla from '../utils/CardGrilla'
+import Input from '../utils/Input'
+import Card from '../utils/Card'
+import CardGrillaItems from '../utils/CardGrillaItems'
 
 const BuyOrder = () => {
   const {cart, totalPrice, clearCart} = useContext(CartContext)
@@ -33,56 +37,44 @@ const BuyOrder = () => {
   }
   
   return (
-    <div className="cartContainer">
-      <h2 className="cartTittle">Generar Orden de compra</h2>
-      <form onSubmit={handleSubmit} className='cartContainer--grilla'>
+    <Card title='Generar Orden de compra'>
+      <form onSubmit={handleSubmit} className='cardContainer--grilla'>
       <h4>Por favor completa tus datos personales para continuar</h4>
-        <div className='cartContainer--grilla--form'>
-            <label>
-              <span>Nombre:</span>
-              <input required type="text" placeholder='Ej: Juan'/>
-            </label>
-            <label>
-              <span>Apellido:</span>
-              <input required type="text" placeholder='Ej: Perez'/>
-            </label>
-            <label>
-              <span>E-Mail:</span>
-              <input required type="email" placeholder='Ej: juan.perez@gmail.com'/>
-            </label>
-            <label>
-              <span>Télefono:</span>
-              <input required type="number" placeholder='Ej: 03814785236'/>
-            </label>
+        <div className='cardContainer--grilla--form'>
+            <Input 
+              placeholder='Ej: Juan' 
+              required={true} 
+              textLabel='Nombre:' 
+              isForForm={true}
+              className='inputForm'
+            />
+            <Input 
+              placeholder='Ej: Perez' 
+              required={true} 
+              textLabel='Apellido:' 
+              isForForm={true} 
+              className='inputForm'
+            />
+            <Input 
+              type='email' 
+              placeholder='Ej: juan.perez@gmail.com' 
+              required={true} textLabel='E-mail:' 
+              isForForm={true} 
+              className='inputForm'
+            />
+            <Input 
+              type='number'
+              placeholder='Ej: 03814785236'
+              required={true} 
+              textLabel='Télefono:' 
+              isForForm={true} 
+              className='inputForm'
+            />
         </div>
         {
-            cart.map(item => {
-              return(
-                <div className='cartContainer--grilla--item' key={item.id}>
-                  <div className='cartContainer--grilla--item--defaults'>
-                    <span>Producto</span>
-                    <div className='cartContainer--grilla--item--defaults__product'>
-                      <img src={item.image} alt={item.title}></img>
-                      {item.title}
-                    </div>
-                  </div>
-                  <div className='cartContainer--grilla--item--defaults'>
-                    <span>Cantidad</span>
-                    {item.quantity}
-                  </div>
-                  <div className='cartContainer--grilla--item--defaults'>
-                    <span>Precio Unitario</span>
-                    ${item.price}
-                  </div>
-                  <div className='cartContainer--grilla--item--defaults'>
-                    <span>Total</span>
-                    ${item.price * item.quantity}
-                  </div>
-                </div>
-              )
-            })
+            cart.map(item => <CardGrillaItems key={item.id} item={item} isBuyOrder={true} />)
           }
-          <p className='cartContainer--grilla__total'>Total a pagar: <span>{totalPrice}</span></p>
+          <p className='cardContainer--grilla__total'>Total a pagar: <span>{totalPrice}</span></p>
           {messageOk ? 
             <p className='message--success'>{messageOk}</p> : 
             messageFail ? 
@@ -101,8 +93,7 @@ const BuyOrder = () => {
             : <button type='submit' className='buttonSuccess'>Generar orden de compra</button>
           }
       </form>
-    </div>
-
+    </Card>
   )
 }
 

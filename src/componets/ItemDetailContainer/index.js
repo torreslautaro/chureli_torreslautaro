@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import getProductsDetails from "../../services/getProductsDetail"
 import ItemDetail from "../ItemDetail"
-import './style.scss'
 import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
@@ -16,7 +15,7 @@ const ItemDetailContainer = () => {
   }, [idProduct])
 
   return (
-    <section>
+    <section className="flex my-0 mx-auto w-full h-full">
       {product ? <ItemDetail {...product} /> : 'Cargando...'}
     </section>
   )

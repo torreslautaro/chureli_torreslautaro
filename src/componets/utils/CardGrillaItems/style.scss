@@ -1,0 +1,32 @@
+.cardGrillaContainer {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  padding: 25px;
+  border-bottom: 1px solid rgb(233, 230, 230);
+  &--item{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px 0px;
+    span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &__product {
+      display: flex;
+      justify-content: space-between;
+      justify-self: center;
+      gap: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &--actions {
+      display: flex;
+    }
+  }
+  
+}
+

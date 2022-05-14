@@ -1,0 +1,24 @@
+.inputForm {
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    input {
+      border: none;
+      border-bottom: 1px solid lightslategray;
+      padding: 5px;
+      outline: none;
+      text-align: center;
+    }
+    input::placeholder {
+      text-align: center;
+    }
+  }
+}
+.inputSearch {
+  width: 80%;
+  border: none;
+  border-right: 1px solid gray;
+  font-size: 20px;
+  outline: none;
+}

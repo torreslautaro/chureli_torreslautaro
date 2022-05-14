@@ -1,4 +1,4 @@
-.cartContainer--grilla {
+.cardContainer--grilla {
   h4 {
     color: rgb(209, 64, 64);
   }
@@ -6,21 +6,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    label {
-      display: flex;
-      flex-direction: column;
-      gap: 5px 0;
-      input {
-        border: none;
-        border-bottom: 1px solid lightslategray;
-        padding: 5px;
-        outline: none;
-        text-align: center;
-      }
-      input::placeholder {
-        text-align: center;
-      }
-    }
   }
   .message--success {
     background-color: rgb(158, 218, 158);

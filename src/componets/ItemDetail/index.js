@@ -1,4 +1,3 @@
-import './style.scss'
 import ItemCount from '../ItemCount'
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
@@ -13,12 +12,10 @@ const ItemDetail = ({id,title, price, description, image, condition, stock}) => 
     addItem(newProduct)
   }
   return (
-    <article className="itemDetail-container">
-      <div className="itemDetail-container--images">
-        <picture>
-          <img alt={title} src={image} />
-        </picture>
-      </div>
+    <article className="grid grid-cols-1 md:grid-cols-2 p-10">
+      <picture className='flex justify-center items-center'>
+        <img className='w-3/5 md:w-2/5' alt={title} src={image} />
+      </picture>
       <div className="itemDetail-container--details">
         <div className='itemDetail-container--details--title'>
           <p className='itemDetail-container--details--title__category'>{condition}</p>
