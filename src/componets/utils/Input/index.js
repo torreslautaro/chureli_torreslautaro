@@ -1,13 +1,12 @@
-import './style.scss'
-const Input = ({type = 'text', placeholder = '', required = false, textLabel = false, isForForm = false, className}) => {
+const Input = ({type = 'text', placeholder = '', required = false, textLabel = false, isForForm = false}) => {
   return(
     isForForm ?
-    <div className={className}>
-      <label className={className}>
+    <div className="">
+      <label className='flex flex-col gap-y-1 font-semibold'>
         <span>{textLabel}</span>
-        <input required={required} type={type} placeholder={placeholder}/>
+        <input required={required} type={type} placeholder={placeholder} className='outline-none p-1 border-b-2 text-center'/>
       </label>
-    </div> : <input required={required} type={type} placeholder={placeholder} className={className}/>
+    </div> : <input required={required} type={type} placeholder={placeholder} className=''/>
   )
 }
 

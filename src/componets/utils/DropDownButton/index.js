@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 
 
-const DropDownButton = ({category, className}) => {
+const DropDownButton = ({category}) => {
 
   const menu = document.querySelector('#dropdownMenu'); 
   
-  console.log(menu)
+  
   const handleClick = () => {
       menu.classList.toggle('hidden');
   }
@@ -32,7 +32,7 @@ const DropDownButton = ({category, className}) => {
               <li>
                 <Link to={`categories/${cat.id}`}
                   onClick={handleClick}
-                  className="text-sm py-2 px-4 block bg-transparent text-gray-700 hover:text-white hover:bg-purple-500"
+                  className="w-max text-sm py-2 px-4 block bg-transparent text-gray-700 hover:text-white hover:bg-indigo-400"
                   href="#"
                 >
                   {cat.name}

@@ -1,12 +1,10 @@
-import './style.scss'
 import { useContext, useState } from 'react'
 import CartContext from '../../contexts/CartContext'
 import addBuyOrder from '../../services/addBuyOrder'
 import { Link } from 'react-router-dom'
-import CardGrilla from '../utils/CardGrilla'
 import Input from '../utils/Input'
 import Card from '../utils/Card'
-import CardGrillaItems from '../utils/CardGrillaItems'
+import CardGrilla from '../utils/CardGrilla'
 
 const BuyOrder = () => {
   const {cart, totalPrice, clearCart} = useContext(CartContext)
@@ -35,12 +33,12 @@ const BuyOrder = () => {
       : setMessageFail(res.message); setProductsWithoutStock(res.productsWithoutStock);
       })
   }
-  
+  const conditionalStyles = cart.length > 1 ? 'md:flex md:flex-col md:justify-between' : '' 
   return (
-    <Card title='Generar Orden de compra'>
-      <form onSubmit={handleSubmit} className='cardContainer--grilla'>
-      <h4>Por favor completa tus datos personales para continuar</h4>
-        <div className='cardContainer--grilla--form'>
+    <Card title='Generar Orden de compra' isBuyOrder={true}>
+      <form onSubmit={handleSubmit} className=' bg-white md:grid md:grid-cols-2 md:gap-10'>
+      <h4 className='text-lg text-center font-semibold text-red-500 col-start-1 col-end-3'>Por favor completa tus datos personales</h4>
+        <div className={`grid grid-cols-2 gap-6 mb-10 md:h-full md:mb-0 ${conditionalStyles}`}>
             <Input 
               placeholder='Ej: Juan' 
               required={true} 
@@ -71,14 +69,12 @@ const BuyOrder = () => {
               className='inputForm'
             />
         </div>
-        {
-            cart.map(item => <CardGrillaItems key={item.id} item={item} isBuyOrder={true} />)
-          }
-          <p className='cardContainer--grilla__total'>Total a pagar: <span>{totalPrice}</span></p>
+        <CardGrilla cart={cart} isBuyOrder={true} />
+          <p className='flex justify-between mt-6 font-xl font-semibold col-start-1 col-end-3'>Total a pagar: <span>${totalPrice}</span></p>
           {messageOk ? 
-            <p className='message--success'>{messageOk}</p> : 
+            <p className='bg-emerald-300 p-4 rounded mt-6 text-md font-semibold text-center'>{messageOk}</p> : 
             messageFail ? 
-            <div className='message--error'>
+            <div className=''>
             <p>{messageFail}</p>
             {
               
@@ -88,9 +84,21 @@ const BuyOrder = () => {
              : ''
           }
           {messageOk ? 
-            <Link className='buttonPrimary' to="/" onClick={() => clearCart()}>Volver al inicio</Link>
-            : messageFail ? <Link className='buttonPrimary' to="/cart">Volver al carrito</Link>
-            : <button type='submit' className='buttonSuccess'>Generar orden de compra</button>
+            <Link className='flex justify-center w-full mt-6 items-center bg-indigo-400 px-4
+            py-1 rounded shadow-md shadow-gray-400 hover:opacity-70
+            transition-all active:transform active:translate-y-1 col-start-1 col-end-3' to="/" onClick={() => clearCart()}>
+             <span className='text-white font-medium text-md'>Volver al inicio</span>
+            </Link>
+            : messageFail ? <Link className='flex justify-center w-full mt-6 items-center bg-indigo-400 px-4
+            py-1 rounded shadow-md shadow-gray-400 hover:opacity-70
+            transition-all active:transform active:translate-y-1 col-start-1 col-end-3' to="/cart">
+              <span className='text-white font-medium text-md'>Volver al carrito</span>
+            </Link>
+            : <button type='submit' className='flex justify-center w-full mt-6 items-center bg-indigo-400 px-4
+            py-1 rounded shadow-md shadow-gray-400 hover:opacity-70
+            transition-all active:transform active:translate-y-1 col-start-1 col-end-3'>
+            <span className='text-white font-medium text-md'>Generar orden de compra</span>
+            </button>
           }
       </form>
     </Card>

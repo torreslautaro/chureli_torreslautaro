@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
   }, [idProduct])
 
   return (
-    <section className="flex my-0 mx-auto w-full h-full">
+    <section className="flex justify-center items-center my-0 mx-auto w-full h-full md:h-5/6 md:py-5 md:px-10">
       {product ? <ItemDetail {...product} /> : 'Cargando...'}
     </section>
   )

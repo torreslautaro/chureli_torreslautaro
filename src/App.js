@@ -9,7 +9,7 @@ import BuyOrder from "./componets/BuyOrder";
 
 function App() {
   return (
-    <div className="App">
+    <div className="md:h-screen md:flex md:flex-col ">
       <BrowserRouter>
       <CartContexProvider>
         <Navbar />
