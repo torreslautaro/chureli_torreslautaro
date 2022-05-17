@@ -1,5 +1,5 @@
 import db from "./firebase"
-import {collection, query, getDocs, where, orderBy} from 'firebase/firestore'
+import {collection, query, getDocs, where} from 'firebase/firestore'
 
 const getProducts = (idCategory) => {
   const productsRef = collection(db, 'products')

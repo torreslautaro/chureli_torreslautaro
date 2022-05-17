@@ -3,6 +3,8 @@ import CartWidget from '../CartWidget'
 import { Link } from 'react-router-dom'
 import getCategories from '../../services/getCategories'
 import DropDownButton from '../utils/DropDownButton'
+import Logo from '../../logo.webp'
+
 
 const Navbar = () => {
     const [category, setCategory] = useState([])
@@ -27,7 +29,7 @@ const Navbar = () => {
                 </svg>
                 <div>
                     <Link to='/' alt="Logo ChureLi">
-                        <img className='w-28 md:w-40 rounded-lg' src='../logo3.png' alt='El logardo de churo' />
+                        <img className='w-28 md:w-40 rounded-lg' src={Logo} alt='El logardo de churo' />
                     </Link>
                 </div>
                 <div  className='flex gap-1 md:col-start-3 md:col-end-4 md:items-center md:justify-end md:gap-10'>
