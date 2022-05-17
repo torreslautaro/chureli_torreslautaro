@@ -6,8 +6,9 @@ import CartContext from '../../contexts/CartContext'
 const ItemDetail = ({id,title, price, description, image, condition, stock}) => {
   const {addItem, isInCart} = useContext(CartContext)
   const handleOnAdd = (quantity) => {
+    const priceFinal = typeof(price) === 'object' ? price[0] : price
     const newProduct = {
-      id,title,price, quantity, image
+      id,title,price : priceFinal, quantity, image
     }
     addItem(newProduct)
   }
@@ -21,7 +22,14 @@ const ItemDetail = ({id,title, price, description, image, condition, stock}) => 
             <p className='bg-indigo-300 rounded-lg px-2 py-1 text-xs w-14 text-center font-semibold text-white'>{condition}</p>
             <h2 className='text-2xl font-semibold'>{title}</h2>
           </div>
-          <p className='text-indigo-500 font-semibold text-xl'>${price}</p>
+          {
+            typeof(price) === 'object' 
+            ? <>
+                <p className="font-semibold text-xl text-red-400 line-through">${price[1]}</p>
+                <p className="text-indigo-500 font-semibold text-xl">${price[0]}</p> 
+              </>
+            : <p className="text-indigo-500 font-semibold text-xl">${price}</p>
+          }
       </div>
       <div className='row-start-3 row-end-4 md:h-auto md:col-start-2 md:col-end-3  md:row-start-2 md:row-end-3'>
         <p className='text-sm text-justify font-normal'>{description}</p>

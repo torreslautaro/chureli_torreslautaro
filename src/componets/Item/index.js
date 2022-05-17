@@ -5,7 +5,15 @@ const Item = ({id, title, price, image}) => {
       <img className="w-full h-full object-center object-cover group-hover:opacity-75" src={image} alt={title}></img>
     </div>
     <h3 className="mt-4 text-sm text-gray-700">{title}</h3>
-    <p className="mt-1 text-lg font-medium text-gray-900">${price}</p>
+    {
+      typeof(price) === 'object' 
+      ? <>
+          <p className="mt-1 text-sm font-medium text-red-400 line-through">${price[1]}</p>
+          <p className="mt-1 text-lg font-medium text-gray-900">${price[0]}</p> 
+        </>
+      : <p className="mt-1 text-lg font-medium text-gray-900">${price}</p>
+    }
+    
     </>
   )
 }

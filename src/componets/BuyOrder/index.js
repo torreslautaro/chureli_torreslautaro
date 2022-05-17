@@ -30,7 +30,6 @@ const BuyOrder = () => {
     }
     addBuyOrder(data)
       .then(res => {
-        console.log(res)
         res.status === 200 
       ? setMessageOk(res.message) 
       : setMessageFail(res.message); setProductsWithoutStock(res.productsWithoutStock);
@@ -103,7 +102,7 @@ const BuyOrder = () => {
             transition-all active:transform active:translate-y-1 col-start-1 col-end-3'>
               {
                 loading ?
-                <svg class="border-t-transparent w-8 h-8 border-4 border-white border-solid rounded-full animate-spin mx-3" viewBox="0 0 24 24">
+                <svg className="border-t-transparent w-8 h-8 border-4 border-white border-solid rounded-full animate-spin mx-3" viewBox="0 0 24 24">
                 </svg> : ''
               }
             <span className='text-white font-medium text-md'>{loading ? 'Procesando' : 'Generar orden de compra'}</span>

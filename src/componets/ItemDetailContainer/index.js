@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
 
   return (
     <section className="flex justify-center items-center my-10 mx-auto w-full h-full md:mt-32 md:py-5 md:px-10">
-      {product ? <ItemDetail {...product} /> : 'Cargando...'}
+      <ItemDetail {...product} />
     </section>
   )
 

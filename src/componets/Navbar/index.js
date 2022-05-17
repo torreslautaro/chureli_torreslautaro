@@ -1,14 +1,12 @@
 import { useState,useEffect } from 'react'
 import CartWidget from '../CartWidget'
-import { Link,useNavigate, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import getCategories from '../../services/getCategories'
 import DropDownButton from '../utils/DropDownButton'
-import Input from '../utils/Input'
 
 const Navbar = () => {
     const [category, setCategory] = useState([])
-    
-    const navigate = useNavigate()
+
 
 
     useEffect(() => {
@@ -44,7 +42,7 @@ const Navbar = () => {
                 <div id="menu" className='hidden w-full md:col-start-2 md:col-end-3 md:row-start-1 md:flex md:items-star'>
                     <ul className='flex flex-col pt-4 md:flex-row md:gap-10 md:pt-0'>
                         <li className='p-1 w-max hover:bg-indigo-400 hover:rounded hover:text-white'><DropDownButton category={category} className='text-left' /></li>
-                        <li className='p-1 w-max hover:bg-indigo-400 hover:rounded hover:text-white'><a href="#">Ofertas</a></li>
+                        <li className='p-1 w-max hover:bg-indigo-400 hover:rounded hover:text-white'><Link to='categories/28f5gww'>Ofertas</Link></li>
                         <li className='p-1 w-max hover:bg-indigo-400 hover:rounded hover:text-white'><a href="#">Ayuda</a></li>
                         <li className='p-1 w-max hover:bg-indigo-400 hover:rounded hover:text-white'><a href="#" alt="Mis compras">Mis compras</a></li>
                     </ul>
