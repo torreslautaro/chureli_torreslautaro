@@ -21,8 +21,8 @@ const ItemListContainer = ({greeting}) => {
   return (
     <>
     <div>
-      <div className='max-w-2xl my-0 mx-auto sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
-        <h2 className='sr-only'>{greeting}</h2>
+      <div className='max-w-2xl my-0 mx-auto sm:py-8 sm:px-6 lg:max-w-7xl lg:px-8'>
+        <h2 className=' text-indigo-500 text-center p-2 text-2xl font-semibold md:p-0 md:mb-6 md:text-4xl'>{greeting}</h2>
         <ItemList products={products} loading={loading} />
       </div>
     </div>
