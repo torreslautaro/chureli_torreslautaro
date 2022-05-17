@@ -17,7 +17,7 @@ export const CartContexProvider = ({children}) => {
 
   const addItem = (product) => {
     setCart([...cart,product])
-    setTotalPrice((totalPrice + product.price * product.quantity))
+    setTotalPrice(totalPrice + ((product.price * product.quantity)*1.00))
   }
 
   const isInCart = (id) => {
@@ -28,7 +28,7 @@ export const CartContexProvider = ({children}) => {
   const removeItem = (id) => {
     const products = cart.filter(prod => prod.id !== id)
     const productForPrice = cart.find(prod => prod.id === id)
-    setTotalPrice(totalPrice - (productForPrice.price * productForPrice.quantity))
+    setTotalPrice(totalPrice - ((productForPrice.price * productForPrice.quantity)*1.00))
     setCart(products)
     
   }

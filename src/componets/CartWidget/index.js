@@ -1,4 +1,3 @@
-import './style.scss'
 import CartContext from '../../contexts/CartContext'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'

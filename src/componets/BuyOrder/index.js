@@ -11,9 +11,11 @@ const BuyOrder = () => {
   const [messageOk, setMessageOk] = useState(null)
   const [messageFail, setMessageFail] = useState(null)
   const [productsWithoutStock, setProductsWithoutStock] = useState([])
+  const [loading, setLoading] = useState(false)
 
 
   const handleSubmit = (evt) => {
+    setLoading(true)
     evt.preventDefault()
     const data = {
       buyer: {
@@ -28,9 +30,11 @@ const BuyOrder = () => {
     }
     addBuyOrder(data)
       .then(res => {
+        console.log(res)
         res.status === 200 
       ? setMessageOk(res.message) 
       : setMessageFail(res.message); setProductsWithoutStock(res.productsWithoutStock);
+      setLoading(false)
       })
   }
   const conditionalStyles = cart.length > 1 ? 'md:flex md:flex-col md:justify-between' : '' 
@@ -72,9 +76,9 @@ const BuyOrder = () => {
         <CardGrilla cart={cart} isBuyOrder={true} />
           <p className='flex justify-between mt-6 font-xl font-semibold col-start-1 col-end-3'>Total a pagar: <span>${totalPrice}</span></p>
           {messageOk ? 
-            <p className='bg-emerald-300 p-4 rounded mt-6 text-md font-semibold text-center'>{messageOk}</p> : 
+            <p className='bg-emerald-300 p-4 rounded mt-6 text-md font-semibold text-center col-start-1 col-end-3'>{messageOk}</p> : 
             messageFail ? 
-            <div className=''>
+            <div className='bg-red-400 p-4 rounded mt-6 text-md font-semibold text-center col-start-1 col-end-3'>
             <p>{messageFail}</p>
             {
               
@@ -97,7 +101,12 @@ const BuyOrder = () => {
             : <button type='submit' className='flex justify-center w-full mt-6 items-center bg-indigo-400 px-4
             py-1 rounded shadow-md shadow-gray-400 hover:opacity-70
             transition-all active:transform active:translate-y-1 col-start-1 col-end-3'>
-            <span className='text-white font-medium text-md'>Generar orden de compra</span>
+              {
+                loading ?
+                <svg class="border-t-transparent w-8 h-8 border-4 border-white border-solid rounded-full animate-spin mx-3" viewBox="0 0 24 24">
+                </svg> : ''
+              }
+            <span className='text-white font-medium text-md'>{loading ? 'Procesando' : 'Generar orden de compra'}</span>
             </button>
           }
       </form>

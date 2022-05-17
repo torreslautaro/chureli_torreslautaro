@@ -10,28 +10,19 @@ const Navbar = () => {
     
     const navigate = useNavigate()
 
-    const location = useLocation()
 
     useEffect(() => {
         getCategories()
             .then(res => setCategory(res))
     }, [])
 
-    const handleSubmit = (evt) => {
-        evt.preventDefault()
-        const search = evt.target[0].value
-        navigate(`/${search}`)
+    const menu = document.querySelector('#menu')
+
+    const handleClick = () => {
+        menu.classList.toggle('hidden')
     }
-
-    const button = document.querySelector('#menu-button'); // Hamburger Icon
-const menu = document.querySelector('#menu'); // Menu
-
-console.log(menu)
-const handleClick = () => {
-    menu.classList.toggle('hidden');
-}
     return (
-        <header className='h-fit bg-white border bottom-1 shadow-md text-sm md:text-lg'>
+        <header className='h-fit bg-white border bottom-1 shadow-md text-sm md:text-md lg:text-lg'>
             <nav className='w-full flex flex-wrap justify-between items-center p-1 md:grid md:grid-cols-3 md:py-5 md:px-8'>
                 <svg onClick={handleClick} xmlns="http://www.w3.org/2000/svg" id="menu-button" className="h-6 w-6 cursor-pointer md:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />

@@ -23,13 +23,13 @@ const DropDownButton = ({category}) => {
           </svg>
         </button>
         <ul
-          class=" absolute hidden bg-white text-base list-none"
+          className=" absolute hidden bg-white text-base list-none"
           id="dropdownMenu"
           aria-labelledby="dropdownMenuButton1"
         >
           {category.map(cat => {
             return (
-              <li>
+              <li key={cat.id}>
                 <Link to={`categories/${cat.id}`}
                   onClick={handleClick}
                   className="w-max text-sm py-2 px-4 block bg-transparent text-gray-700 hover:text-white hover:bg-indigo-400"

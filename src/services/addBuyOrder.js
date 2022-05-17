@@ -1,6 +1,5 @@
 import db from "./firebase"
 import { addDoc, collection,doc, runTransaction } from "firebase/firestore"
-import { async } from "@firebase/util"
 
 
 const verifyStockTransaction = (id, quantity) => {
@@ -54,7 +53,8 @@ const addBuyOrder = async (data) => {
         message : 'La compra no se pudo realizar. Los siguientes productos se encuentran sin stock:'
       }
     } else {
-      if(res.productsWithStock.length > 0) {
+      
+      if(res.productsWithoutStock.length === 0) {
         await addDoc(ordersRef,data)
           .then(res => id = res.id)
         await res.productsWithStock.forEach(async prod => {

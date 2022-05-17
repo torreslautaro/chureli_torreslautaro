@@ -15,7 +15,7 @@ const Cart = () => {
         <Link className='flex justify-center md:w-1/2 mt-6 items-center bg-indigo-400 px-4
             py-1 rounded shadow-md shadow-gray-400 hover:opacity-70
             transition-all active:transform active:translate-y-1' to="/">
-          <span>Volver al inicio</span>
+          <span className='text-white'>Volver al inicio</span>
         </Link>
       </div>
     )

@@ -1,10 +1,7 @@
 <div className='flex'>
                 
                 <div className='header-first--formandoffer'>
-                    <form onSubmit={handleSubmit}>
-                        <Input placeholder='Buscar por nombre de producto...'  className='inputSearch'/>
-                        <button></button>
-                    </form>
+                    
                     <a href='#'>
                         <span></span>
                         Envíos gratis en 24hs a partir de $4000

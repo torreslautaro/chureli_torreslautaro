@@ -1,7 +1,7 @@
 import db from "./firebase"
 import {collection, query, getDocs, where, startAt, endAt, orderBy} from 'firebase/firestore'
 
-const getProducts = (idCategory, search) => {
+const getProducts = (idCategory) => {
   const productsRef = collection(db, 'products')
   const q = idCategory ? query(productsRef,where('category','==',idCategory))
             : productsRef
@@ -11,7 +11,7 @@ const getProducts = (idCategory, search) => {
                     const products = res.docs.map(doc => {
                       return {id: doc.id, ...doc.data()}
                     })
-                    return search ? products.filter(prod => prod.title.toLowerCase().includes(search.toLowerCase())) : products
+                    return products
                   })
 
   return results
