@@ -201,7 +201,13 @@ Los services disponibles en la aplicacion son:
 
 En este gif podras ver como usar ChureLi
 
+**Version Desktop**
+
 ![](https://github.com/torreslautaro/chureli_torreslautaro/blob/main/2022-05-17%2021-20-19.gif)
+
+**Version Mobile**
+
+![](https://github.com/torreslautaro/chureli_torreslautaro/blob/main/Gif-Chureli-Mobile.gif)
 
 ## Authors
 
