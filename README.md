@@ -1,7 +1,7 @@
 
 # ChureLi - Ecommerce
 
-Proyecto realizado para el curso de ReactJS en @coderhouse dictado por Sebastian Zuviria.
+Proyecto realizado para el curso de ReactJS en @coderhouse dictado por [@szuviria](https://github.com/szuviria).
 
 
 ## Tech Stack
@@ -202,3 +202,8 @@ Los services disponibles en la aplicacion son:
 En este gif podras ver como usar ChureLi
 
 ![](https://github.com/torreslautaro/chureli_torreslautaro/blob/main/2022-05-17%2021-20-19.gif)
+
+## Authors
+
+- [@torreslautaro](https://github.com/torreslautaro)
+
