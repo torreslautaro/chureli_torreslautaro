@@ -4,8 +4,8 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         'auto-fit' : 'repeat(auto-fit, minmax(200px,225px))',
-        'custom' : '6rem 1fr',
-        'custom-2' : '13rem 1fr'
+        'custom' : '5rem 1fr',
+        'custom-2' : '11rem 1fr'
       },
       
     },

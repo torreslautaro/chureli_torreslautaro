@@ -1,8 +1,8 @@
 const CardGrillaItems = ({item, isBuyOrder, removeItem = ''}) => {
 
   return(
-    <div className='grid grid-rows-1 grid-cols-custom gap-1 border-b-2 pb-4 md:h-full'>
-      <div className=' w-24 col-start-1 col-end-2'>
+    <div className='grid grid-rows-1 grid-cols-custom gap-4 border-b-2 pb-4 md:h-full'>
+      <div className='w-24 col-start-1 col-end-2'>
         <img src={item.image} alt={item.title}></img>
       </div>
       <div className="grid grid-rows-2 grid-cols-custom-2 gap-3 col-start-2 col-end-3">
