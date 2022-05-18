@@ -184,5 +184,21 @@ Los services disponibles en la aplicacion son:
 - **getCategories:** Se encuentra la logica para poder obtener las categorias desde Firebase
 - **addBuyOrder:** Se encuentra la logica para poder guardar una orden de compras en Firebase
 
+## Como comprar en ChureLi?
+
+1- Ingresar a https://chureli.vercel.app/
+
+2- Navegar por el Home o por las diferentes categorias.
+
+3- Elegir el producto que queres comprar y la cantidad.
+
+4- Ir al carrito de compras para verificar que este todo correcto.
+
+5- Desde el carrito ingresa a "Terminar Compra", completa con tus datos personales y espera a que la aplicacion te devuelva tu codigo de orden.
 
 
+## Demo
+
+Insert gif or link to demo
+
+[!image] 
