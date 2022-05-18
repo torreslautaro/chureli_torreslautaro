@@ -1,7 +1,7 @@
 
 # ChureLi - Ecommerce
 
-Proyecto realizado para el curso de ReactJS en @coderhouse
+Proyecto realizado para el curso de ReactJS en @coderhouse dictado por Sebastian Zuviria.
 
 
 ## Tech Stack
