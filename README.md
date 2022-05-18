@@ -199,6 +199,6 @@ Los services disponibles en la aplicacion son:
 
 ## Demo
 
-Insert gif or link to demo
+En este gif podras ver como usar ChureLi
 
-[!image] 
+![](https://github.com/torreslautaro/chureli_torreslautaro/blob/main/2022-05-17%2021-20-19.gif)
